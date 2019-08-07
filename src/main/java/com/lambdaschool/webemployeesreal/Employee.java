@@ -25,15 +25,15 @@ public class Employee {
         this.healthPlanID = healthPlanID;
     }
 
-    public Employee(Employee toClone) {
-        this.id = toClone.getId();
-        this.fname = toClone.getFname();
-        this.lname = toClone.getLname();
-        this.salary = toClone.getSalary();
-        this.has401K = toClone.isHas401K();
-        this.companyID = toClone.getCompanyID();
-        this.healthPlanID = toClone.getHealthPlanID();
-    }
+//    public Employee(Employee toClone) {
+//        this.id = toClone.getId();
+//        this.fname = toClone.getFname();
+//        this.lname = toClone.getLname();
+//        this.salary = toClone.getSalary();
+//        this.has401K = toClone.isHas401K();
+//        this.companyID = toClone.getCompanyID();
+//        this.healthPlanID = toClone.getHealthPlanID();
+//    }
 
     public long getId() {
         return id;
