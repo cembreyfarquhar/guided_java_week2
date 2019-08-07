@@ -14,7 +14,8 @@ public class CalculationController {
                 produces = {"application/json"})
     public ResponseEntity<?> checkRaise(@PathVariable long id, @PathVariable double raise) {
         Employee tempEmp = new Employee(WebemployeesrealApplication.ourEmpList.findEmployee(e -> (e.getId() == id)));
-        tempEmp.setSalary(tempEmp.getSalary() * (1.0 + raise));
+        double estimatedNewSalary = Math.round(tempEmp.getSalary() * (1.0 + raise));
+        tempEmp.setSalary(estimatedNewSalary);
         return new ResponseEntity<>(tempEmp, HttpStatus.OK);
     }
 }
